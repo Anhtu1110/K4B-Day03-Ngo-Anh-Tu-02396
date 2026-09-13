@@ -5,7 +5,7 @@
     "action_type": "FINAL_ANSWER",
     "thought": "Câu hỏi chung về quy chế học vụ, trả lời trực tiếp không cần gọi Tool.",
     "output": "[Mock Agent Response]: Xin chào! Quy chế học vụ VinUni yêu cầu sinh viên tích lũy tối thiểu 120 tín chỉ và duy trì GPA trên 2.0 để tốt nghiệp.",
-    "latency_ms": 2845.93
+    "latency_ms": 0.15
   },
   {
     "step": 1,
@@ -15,15 +15,522 @@
     "arguments": {
       "student_id": "SV2026001"
     },
-    "observation": {},
-    "latency_ms": 799.12
+    "observation": {
+      "status": "SUCCESS",
+      "student_id": "SV2026001",
+      "data": {
+        "full_name": "Nguyễn Văn An",
+        "class": "AI-K4",
+        "gpa": 3.85,
+        "email": "an.nv@vinuni.edu.vn",
+        "status": "Đang học",
+        "advisor": "PGS.TS Nguyễn Văn A"
+      }
+    },
+    "latency_ms": 0.12000000000000001,
+    "details": {
+      "llm_latency_ms": 0.07,
+      "tool_latency_ms": 0.05,
+      "status": "SUCCESS"
+    }
   },
   {
     "step": 2,
     "query": "Hãy tra cứu thông tin học vụ của sinh viên SV2026001.",
-    "action_type": "FINAL_ANSWER",
-    "thought": "Tổng hợp kết quả từ MCP Server thành công.",
-    "output": "Chưa thể trả lời chi tiết do chưa nhận được dữ liệu từ MCP Server (hãy hoàn thành TODO 2.1).",
-    "latency_ms": 10.0
+    "action_type": "TOOL_EXECUTION",
+    "tool_name": "academic_query",
+    "arguments": {
+      "student_id": "SV2026001"
+    },
+    "observation": {
+      "status": "SUCCESS",
+      "student_id": "SV2026001",
+      "data": {
+        "full_name": "Nguyễn Văn An",
+        "class": "AI-K4",
+        "gpa": 3.85,
+        "email": "an.nv@vinuni.edu.vn",
+        "status": "Đang học",
+        "advisor": "PGS.TS Nguyễn Văn A"
+      }
+    },
+    "latency_ms": 0.11,
+    "details": {
+      "llm_latency_ms": 0.08,
+      "tool_latency_ms": 0.03,
+      "status": "SUCCESS"
+    }
+  },
+  {
+    "step": 3,
+    "query": "Hãy tra cứu thông tin học vụ của sinh viên SV2026001.",
+    "action_type": "TOOL_EXECUTION",
+    "tool_name": "academic_query",
+    "arguments": {
+      "student_id": "SV2026001"
+    },
+    "observation": {
+      "status": "SUCCESS",
+      "student_id": "SV2026001",
+      "data": {
+        "full_name": "Nguyễn Văn An",
+        "class": "AI-K4",
+        "gpa": 3.85,
+        "email": "an.nv@vinuni.edu.vn",
+        "status": "Đang học",
+        "advisor": "PGS.TS Nguyễn Văn A"
+      }
+    },
+    "latency_ms": 0.09,
+    "details": {
+      "llm_latency_ms": 0.06,
+      "tool_latency_ms": 0.03,
+      "status": "SUCCESS"
+    }
+  },
+  {
+    "step": 4,
+    "query": "Hãy tra cứu thông tin học vụ của sinh viên SV2026001.",
+    "action_type": "TOOL_EXECUTION",
+    "tool_name": "academic_query",
+    "arguments": {
+      "student_id": "SV2026001"
+    },
+    "observation": {
+      "status": "SUCCESS",
+      "student_id": "SV2026001",
+      "data": {
+        "full_name": "Nguyễn Văn An",
+        "class": "AI-K4",
+        "gpa": 3.85,
+        "email": "an.nv@vinuni.edu.vn",
+        "status": "Đang học",
+        "advisor": "PGS.TS Nguyễn Văn A"
+      }
+    },
+    "latency_ms": 0.34,
+    "details": {
+      "llm_latency_ms": 0.08,
+      "tool_latency_ms": 0.26,
+      "status": "SUCCESS"
+    }
+  },
+  {
+    "step": 5,
+    "query": "Hãy tra cứu thông tin học vụ của sinh viên SV2026001.",
+    "action_type": "TOOL_EXECUTION",
+    "tool_name": "academic_query",
+    "arguments": {
+      "student_id": "SV2026001"
+    },
+    "observation": {
+      "status": "SUCCESS",
+      "student_id": "SV2026001",
+      "data": {
+        "full_name": "Nguyễn Văn An",
+        "class": "AI-K4",
+        "gpa": 3.85,
+        "email": "an.nv@vinuni.edu.vn",
+        "status": "Đang học",
+        "advisor": "PGS.TS Nguyễn Văn A"
+      }
+    },
+    "latency_ms": 0.11,
+    "details": {
+      "llm_latency_ms": 0.08,
+      "tool_latency_ms": 0.03,
+      "status": "SUCCESS"
+    }
+  },
+  {
+    "step": 5,
+    "query": "Hãy tra cứu thông tin học vụ của sinh viên SV2026001.",
+    "action_type": "MAX_ITERATIONS",
+    "thought": "Agent đạt giới hạn số vòng lặp mà chưa hoàn tất.",
+    "output": "",
+    "latency_ms": 0,
+    "details": {
+      "max_iterations": 5
+    }
+  },
+  {
+    "step": 1,
+    "query": "Hãy đặt lịch tư vấn học vụ cho sinh viên SV2026001 lúc 14:00 15/09/2026 với PGS.TS Nguyễn Văn A.",
+    "action_type": "TOOL_EXECUTION",
+    "tool_name": "schedule_appointment",
+    "arguments": {
+      "student_id": "SV2026001",
+      "datetime_str": "14:00 15/09/2026",
+      "advisor_name": "PGS.TS Nguyễn Văn A"
+    },
+    "observation": {
+      "status": "SUCCESS",
+      "booking_id": "BK-SV2026001-99",
+      "student_id": "SV2026001",
+      "datetime": "14:00 15/09/2026",
+      "advisor": "PGS.TS Nguyễn Văn A",
+      "message": "Đặt lịch thành công cho sinh viên SV2026001 với PGS.TS Nguyễn Văn A vào lúc 14:00 15/09/2026."
+    },
+    "latency_ms": 0.29000000000000004,
+    "details": {
+      "llm_latency_ms": 0.27,
+      "tool_latency_ms": 0.02,
+      "status": "SUCCESS"
+    }
+  },
+  {
+    "step": 2,
+    "query": "Hãy đặt lịch tư vấn học vụ cho sinh viên SV2026001 lúc 14:00 15/09/2026 với PGS.TS Nguyễn Văn A.",
+    "action_type": "TOOL_EXECUTION",
+    "tool_name": "schedule_appointment",
+    "arguments": {
+      "student_id": "SV2026001",
+      "datetime_str": "14:00 15/09/2026",
+      "advisor_name": "PGS.TS Nguyễn Văn A"
+    },
+    "observation": {
+      "status": "SUCCESS",
+      "booking_id": "BK-SV2026001-99",
+      "student_id": "SV2026001",
+      "datetime": "14:00 15/09/2026",
+      "advisor": "PGS.TS Nguyễn Văn A",
+      "message": "Đặt lịch thành công cho sinh viên SV2026001 với PGS.TS Nguyễn Văn A vào lúc 14:00 15/09/2026."
+    },
+    "latency_ms": 0.44999999999999996,
+    "details": {
+      "llm_latency_ms": 0.41,
+      "tool_latency_ms": 0.04,
+      "status": "SUCCESS"
+    }
+  },
+  {
+    "step": 3,
+    "query": "Hãy đặt lịch tư vấn học vụ cho sinh viên SV2026001 lúc 14:00 15/09/2026 với PGS.TS Nguyễn Văn A.",
+    "action_type": "TOOL_EXECUTION",
+    "tool_name": "schedule_appointment",
+    "arguments": {
+      "student_id": "SV2026001",
+      "datetime_str": "14:00 15/09/2026",
+      "advisor_name": "PGS.TS Nguyễn Văn A"
+    },
+    "observation": {
+      "status": "SUCCESS",
+      "booking_id": "BK-SV2026001-99",
+      "student_id": "SV2026001",
+      "datetime": "14:00 15/09/2026",
+      "advisor": "PGS.TS Nguyễn Văn A",
+      "message": "Đặt lịch thành công cho sinh viên SV2026001 với PGS.TS Nguyễn Văn A vào lúc 14:00 15/09/2026."
+    },
+    "latency_ms": 0.15,
+    "details": {
+      "llm_latency_ms": 0.11,
+      "tool_latency_ms": 0.04,
+      "status": "SUCCESS"
+    }
+  },
+  {
+    "step": 4,
+    "query": "Hãy đặt lịch tư vấn học vụ cho sinh viên SV2026001 lúc 14:00 15/09/2026 với PGS.TS Nguyễn Văn A.",
+    "action_type": "TOOL_EXECUTION",
+    "tool_name": "schedule_appointment",
+    "arguments": {
+      "student_id": "SV2026001",
+      "datetime_str": "14:00 15/09/2026",
+      "advisor_name": "PGS.TS Nguyễn Văn A"
+    },
+    "observation": {
+      "status": "SUCCESS",
+      "booking_id": "BK-SV2026001-99",
+      "student_id": "SV2026001",
+      "datetime": "14:00 15/09/2026",
+      "advisor": "PGS.TS Nguyễn Văn A",
+      "message": "Đặt lịch thành công cho sinh viên SV2026001 với PGS.TS Nguyễn Văn A vào lúc 14:00 15/09/2026."
+    },
+    "latency_ms": 0.15,
+    "details": {
+      "llm_latency_ms": 0.12,
+      "tool_latency_ms": 0.03,
+      "status": "SUCCESS"
+    }
+  },
+  {
+    "step": 5,
+    "query": "Hãy đặt lịch tư vấn học vụ cho sinh viên SV2026001 lúc 14:00 15/09/2026 với PGS.TS Nguyễn Văn A.",
+    "action_type": "TOOL_EXECUTION",
+    "tool_name": "schedule_appointment",
+    "arguments": {
+      "student_id": "SV2026001",
+      "datetime_str": "14:00 15/09/2026",
+      "advisor_name": "PGS.TS Nguyễn Văn A"
+    },
+    "observation": {
+      "status": "SUCCESS",
+      "booking_id": "BK-SV2026001-99",
+      "student_id": "SV2026001",
+      "datetime": "14:00 15/09/2026",
+      "advisor": "PGS.TS Nguyễn Văn A",
+      "message": "Đặt lịch thành công cho sinh viên SV2026001 với PGS.TS Nguyễn Văn A vào lúc 14:00 15/09/2026."
+    },
+    "latency_ms": 0.15,
+    "details": {
+      "llm_latency_ms": 0.11,
+      "tool_latency_ms": 0.04,
+      "status": "SUCCESS"
+    }
+  },
+  {
+    "step": 5,
+    "query": "Hãy đặt lịch tư vấn học vụ cho sinh viên SV2026001 lúc 14:00 15/09/2026 với PGS.TS Nguyễn Văn A.",
+    "action_type": "MAX_ITERATIONS",
+    "thought": "Agent đạt giới hạn số vòng lặp mà chưa hoàn tất.",
+    "output": "",
+    "latency_ms": 0,
+    "details": {
+      "max_iterations": 5
+    }
+  },
+  {
+    "step": 1,
+    "query": "Tôi là sinh viên SV2026002. Hãy tra cứu cố vấn học tập của tôi rồi đặt lịch tư vấn vào lúc 10:00 16/09/2026 với cố vấn đó.",
+    "action_type": "TOOL_EXECUTION",
+    "tool_name": "academic_query",
+    "arguments": {
+      "student_id": "SV2026002"
+    },
+    "observation": {
+      "status": "SUCCESS",
+      "student_id": "SV2026002",
+      "data": {
+        "full_name": "Trần Thị Bình",
+        "class": "AI-K4",
+        "gpa": 3.6,
+        "email": "binh.tt@vinuni.edu.vn",
+        "status": "Đang học",
+        "advisor": "TS. Lê Thị B"
+      }
+    },
+    "latency_ms": 0.14,
+    "details": {
+      "llm_latency_ms": 0.07,
+      "tool_latency_ms": 0.07,
+      "status": "SUCCESS"
+    }
+  },
+  {
+    "step": 2,
+    "query": "Tôi là sinh viên SV2026002. Hãy tra cứu cố vấn học tập của tôi rồi đặt lịch tư vấn vào lúc 10:00 16/09/2026 với cố vấn đó.",
+    "action_type": "TOOL_EXECUTION",
+    "tool_name": "schedule_appointment",
+    "arguments": {
+      "student_id": "SV2026002",
+      "datetime_str": "10:00 16/09/2026",
+      "advisor_name": "TS. Lê Thị B"
+    },
+    "observation": {
+      "status": "SUCCESS",
+      "booking_id": "BK-SV2026002-99",
+      "student_id": "SV2026002",
+      "datetime": "10:00 16/09/2026",
+      "advisor": "TS. Lê Thị B",
+      "message": "Đặt lịch thành công cho sinh viên SV2026002 với TS. Lê Thị B vào lúc 10:00 16/09/2026."
+    },
+    "latency_ms": 0.17,
+    "details": {
+      "llm_latency_ms": 0.13,
+      "tool_latency_ms": 0.04,
+      "status": "SUCCESS"
+    }
+  },
+  {
+    "step": 3,
+    "query": "Tôi là sinh viên SV2026002. Hãy tra cứu cố vấn học tập của tôi rồi đặt lịch tư vấn vào lúc 10:00 16/09/2026 với cố vấn đó.",
+    "action_type": "TOOL_EXECUTION",
+    "tool_name": "schedule_appointment",
+    "arguments": {
+      "student_id": "SV2026002",
+      "datetime_str": "10:00 16/09/2026",
+      "advisor_name": "TS. Lê Thị B"
+    },
+    "observation": {
+      "status": "SUCCESS",
+      "booking_id": "BK-SV2026002-99",
+      "student_id": "SV2026002",
+      "datetime": "10:00 16/09/2026",
+      "advisor": "TS. Lê Thị B",
+      "message": "Đặt lịch thành công cho sinh viên SV2026002 với TS. Lê Thị B vào lúc 10:00 16/09/2026."
+    },
+    "latency_ms": 0.17,
+    "details": {
+      "llm_latency_ms": 0.13,
+      "tool_latency_ms": 0.04,
+      "status": "SUCCESS"
+    }
+  },
+  {
+    "step": 4,
+    "query": "Tôi là sinh viên SV2026002. Hãy tra cứu cố vấn học tập của tôi rồi đặt lịch tư vấn vào lúc 10:00 16/09/2026 với cố vấn đó.",
+    "action_type": "TOOL_EXECUTION",
+    "tool_name": "schedule_appointment",
+    "arguments": {
+      "student_id": "SV2026002",
+      "datetime_str": "10:00 16/09/2026",
+      "advisor_name": "TS. Lê Thị B"
+    },
+    "observation": {
+      "status": "SUCCESS",
+      "booking_id": "BK-SV2026002-99",
+      "student_id": "SV2026002",
+      "datetime": "10:00 16/09/2026",
+      "advisor": "TS. Lê Thị B",
+      "message": "Đặt lịch thành công cho sinh viên SV2026002 với TS. Lê Thị B vào lúc 10:00 16/09/2026."
+    },
+    "latency_ms": 0.13,
+    "details": {
+      "llm_latency_ms": 0.1,
+      "tool_latency_ms": 0.03,
+      "status": "SUCCESS"
+    }
+  },
+  {
+    "step": 5,
+    "query": "Tôi là sinh viên SV2026002. Hãy tra cứu cố vấn học tập của tôi rồi đặt lịch tư vấn vào lúc 10:00 16/09/2026 với cố vấn đó.",
+    "action_type": "TOOL_EXECUTION",
+    "tool_name": "schedule_appointment",
+    "arguments": {
+      "student_id": "SV2026002",
+      "datetime_str": "10:00 16/09/2026",
+      "advisor_name": "TS. Lê Thị B"
+    },
+    "observation": {
+      "status": "SUCCESS",
+      "booking_id": "BK-SV2026002-99",
+      "student_id": "SV2026002",
+      "datetime": "10:00 16/09/2026",
+      "advisor": "TS. Lê Thị B",
+      "message": "Đặt lịch thành công cho sinh viên SV2026002 với TS. Lê Thị B vào lúc 10:00 16/09/2026."
+    },
+    "latency_ms": 0.14,
+    "details": {
+      "llm_latency_ms": 0.09,
+      "tool_latency_ms": 0.05,
+      "status": "SUCCESS"
+    }
+  },
+  {
+    "step": 5,
+    "query": "Tôi là sinh viên SV2026002. Hãy tra cứu cố vấn học tập của tôi rồi đặt lịch tư vấn vào lúc 10:00 16/09/2026 với cố vấn đó.",
+    "action_type": "MAX_ITERATIONS",
+    "thought": "Agent đạt giới hạn số vòng lặp mà chưa hoàn tất.",
+    "output": "",
+    "latency_ms": 0,
+    "details": {
+      "max_iterations": 5
+    }
+  },
+  {
+    "step": 1,
+    "query": "Hãy tra cứu thông tin học vụ của sinh viên SV9999999.",
+    "action_type": "TOOL_EXECUTION",
+    "tool_name": "academic_query",
+    "arguments": {
+      "student_id": "SV9999999"
+    },
+    "observation": {
+      "status": "NOT_FOUND",
+      "message": "Không tìm thấy dữ liệu sinh viên có mã 'SV9999999'"
+    },
+    "latency_ms": 0.1,
+    "details": {
+      "llm_latency_ms": 0.07,
+      "tool_latency_ms": 0.03,
+      "status": "NOT_FOUND"
+    }
+  },
+  {
+    "step": 2,
+    "query": "Hãy tra cứu thông tin học vụ của sinh viên SV9999999.",
+    "action_type": "TOOL_EXECUTION",
+    "tool_name": "academic_query",
+    "arguments": {
+      "student_id": "SV9999999"
+    },
+    "observation": {
+      "status": "NOT_FOUND",
+      "message": "Không tìm thấy dữ liệu sinh viên có mã 'SV9999999'"
+    },
+    "latency_ms": 0.11,
+    "details": {
+      "llm_latency_ms": 0.08,
+      "tool_latency_ms": 0.03,
+      "status": "NOT_FOUND"
+    }
+  },
+  {
+    "step": 3,
+    "query": "Hãy tra cứu thông tin học vụ của sinh viên SV9999999.",
+    "action_type": "TOOL_EXECUTION",
+    "tool_name": "academic_query",
+    "arguments": {
+      "student_id": "SV9999999"
+    },
+    "observation": {
+      "status": "NOT_FOUND",
+      "message": "Không tìm thấy dữ liệu sinh viên có mã 'SV9999999'"
+    },
+    "latency_ms": 0.1,
+    "details": {
+      "llm_latency_ms": 0.07,
+      "tool_latency_ms": 0.03,
+      "status": "NOT_FOUND"
+    }
+  },
+  {
+    "step": 4,
+    "query": "Hãy tra cứu thông tin học vụ của sinh viên SV9999999.",
+    "action_type": "TOOL_EXECUTION",
+    "tool_name": "academic_query",
+    "arguments": {
+      "student_id": "SV9999999"
+    },
+    "observation": {
+      "status": "NOT_FOUND",
+      "message": "Không tìm thấy dữ liệu sinh viên có mã 'SV9999999'"
+    },
+    "latency_ms": 0.13,
+    "details": {
+      "llm_latency_ms": 0.11,
+      "tool_latency_ms": 0.02,
+      "status": "NOT_FOUND"
+    }
+  },
+  {
+    "step": 5,
+    "query": "Hãy tra cứu thông tin học vụ của sinh viên SV9999999.",
+    "action_type": "TOOL_EXECUTION",
+    "tool_name": "academic_query",
+    "arguments": {
+      "student_id": "SV9999999"
+    },
+    "observation": {
+      "status": "NOT_FOUND",
+      "message": "Không tìm thấy dữ liệu sinh viên có mã 'SV9999999'"
+    },
+    "latency_ms": 0.1,
+    "details": {
+      "llm_latency_ms": 0.08,
+      "tool_latency_ms": 0.02,
+      "status": "NOT_FOUND"
+    }
+  },
+  {
+    "step": 5,
+    "query": "Hãy tra cứu thông tin học vụ của sinh viên SV9999999.",
+    "action_type": "MAX_ITERATIONS",
+    "thought": "Agent đạt giới hạn số vòng lặp mà chưa hoàn tất.",
+    "output": "",
+    "latency_ms": 0,
+    "details": {
+      "max_iterations": 5
+    }
   }
 ]
